@@ -15,12 +15,10 @@ You could imaging the sample being taken from a database, or larger than memory 
 
     -   A plot showing a histogram of prices
 
-2.  The app should use matplotlib plots (which can be found in `plots.py`
+2.  The app should use matplotlib, plotnine, or seaborn plots (example plotting functions can be found in `plots.py`)
 
 3.  The histogram plot should not rerender if the log-scale selector is changed
 
 4.  The sample should only be retaken if the proportion slider changes
 
 5.  Each time the proportion slider changes the app should take a new sample
-
-# 
