@@ -6,9 +6,10 @@ from plots import plot_hist, plot_tips
 
 def first_taxi(data):
     if data.empty:
-        return '## First taxi id: *NA*'
+        return "## First taxi id: *NA*"
 
     return f'## First taxi id: *{data["taxi_id"].iloc[0]}*'
+
 
 pn.extension(
     sizing_mode="stretch_width",
@@ -38,7 +39,7 @@ pn.template.FastListTemplate(
     main=[
         pn.bind(first_taxi, sample_data),
         pn.pane.Matplotlib(pn.bind(plot_tips, sample_data, scale_input), height=600),
-        pn.pane.Matplotlib(pn.bind(plot_hist, sample_data), height=600  ),
+        pn.pane.Matplotlib(pn.bind(plot_hist, sample_data), height=600),
     ],
     main_max_width="850px",
 ).servable()
